@@ -6,9 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700|Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700|Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+
 </head>
 
 <body class="body">
@@ -53,7 +54,7 @@
 
 
             <div class="container-hero">
-                <h1 class="title-hero">
+                <h1 class="title-hero  bigEntrance">
                     эффективные решения для вашего бизнеса
                 </h1>
                 <button type="button" class="button-hero " data-modal-open>Заказать услугу</button>
@@ -108,7 +109,7 @@
         <!-- Чем мы занимаемся -->
         <section class="section_focus">
             <div class="container_focus">
-                <h2 class="section-title">Чем мы занимаемся</h2>
+                <h2 class="section-title ">Чем мы занимаемся</h2>
 
                 <ul class="specialization">
                     <li class="our_focus">
@@ -335,40 +336,43 @@
     </main>
     <!-- Модальное окно -->
     <div class="backdrop is-hidden " data-modal>
-        <div class="modal">
+        <div class="modal swirl-in-top-fwd">
             <form class="js-speaker-form">
-                <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                <h2 class="modal-title slideRight">Оставьте свои данные, мы вам перезвоним</h2>
                 <div class="form-field">
+                    <input class="form-input" type="text" name="user-name" id="name" placeholder=" " />
                     <label class="form-label" for="name">Имя</label>
-
-                    <input class="form-input" type="text" name="user-name" id="name" />
+                    <svg class="form-icon" width="18" height="18"><use href="./images/symbol-defs.svg#icon-person-black"></use></svg>
                 </div>
                 <div class="form-field">
-                    <label class="form-label" for=" tel ">Телефон</label>
-                    <input class="form-input" type=" tel " name="tel " id="tel ">
+                    <input class="form-input" type="tel" name="tel " id="tel" placeholder=" " />
+                    <label class="form-label" for="tel">Телефон</label>
+                    <svg class="form-icon" width="18" height="18"><use href="./images/symbol-defs.svg#icon-phone-black"></use></svg>
                 </div>
                 <div class="form-field">
-                    <label class="form-label" for=" mail ">Почта</label>
-                    <input class="form-input" type="email " name="mail " id="mail" />
+                    <input class="form-input" type="email" name="mail" id="mail" placeholder=" " />
+                    <label class="form-label" for="mail">Почта</label>
+                    <svg class="form-icon" width="18" height="18"><use href="./images/symbol-defs.svg#icon-email-black"></use></svg>
                 </div>
                 <div>
-                    <label for=""></label>
-                    <textarea class="comment" ame=" " id=" " cols="30 " rows="10 "></textarea>
-                </div>
-                <div>
-                    <input type="checkbox" name="" value="" id="policy" />
-                    <label class="confirmation" for="policy">Соглашаюсь с рассылкой и принимаю <a class="conditions" href="#">Условия договора</a></label>
+                    <textarea class="comment" name="comments" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
 
                 </div>
+                <label class="form-policy">
+                    <input class="checkbox visually-hidden" type="checkbox" name="policy" />
+                    <span class="checkbox-icon"></span> 
+                    <span class="confirmation" >Соглашаюсь с рассылкой и принимаю <a class="conditions" target="_blank" href="#">Условия договора</a></span>
+
+                </label>
                 <div>
-                    <b utton class="form-send" type=" submit ">Отправить</b>
+                    <button class="form-send" type="submit">Отправить</button>
                 </div>
 
             </form>
-            <button class="form-close " data-modal-close><svg class="modal-window-closing "><use href="./images/sprite.svg#modal-window-closing "></use></svg></button>
+            <button class="form-close" data-modal-close><svg class="modal-window-closing" width="18" height="18"><use href="./images/symbol-defs.svg#icon-close-black"></use></svg></button>
         </div>
     </div>
-    <footer class="footer ">
+    <footer class="footer">
         <!-- Футер -->
 
         <div class="container-footer ">
@@ -419,9 +423,9 @@
             <div class="exhortation-block ">
                 <p class="color-footer ">подпишитесь на рассылку</p>
                 <form class="subscribe ">
-                    <input type="email " class="input " placeholder="E-mail " />
-                    <button class="button_sign ">Подписаться 
-                        <svg class="send " width="24 " height="24 "><use href="./images/sprite.svg#twitter_icon_send_footer "></use>
+                    <input type="email" class="input " placeholder="E-mail " />
+                    <button class="button_sign">Подписаться 
+                        <svg class="send" width="24" height="24 "><use href="./images/sprite.svg#twitter_icon_send_footer "></use>
                                     </svg></button>
                 </form>
             </div>
@@ -445,7 +449,9 @@
                 });
         })();
     </script>
-    <script>
+
+
+    <!-- <script>
         const {
             height: pageHeaderHeight
         } = document
@@ -453,8 +459,10 @@
             .getBoundingClientRect();
 
         document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
+    </script> -->
     <script src="./js/modal.js "></script>
+
+
 </body>
 
 </html>
